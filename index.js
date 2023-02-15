@@ -17,7 +17,7 @@ app.post("/", (req, res) => {
   try {
     const token = totp(req.body.key);
     const retData = {
-      susertoken: token,
+      generatedTotp: token,
     };
     res.json(retData);
   } catch (err) {
